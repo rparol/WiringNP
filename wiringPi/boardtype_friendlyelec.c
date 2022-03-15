@@ -96,13 +96,20 @@ static int getFieldValueInCpuInfo(char* hardware, int hardwareMaxLen, char* revi
     int isGotHardware = 0;
     int isGotRevision = 0;
 
-    if (!(f = fopen("/sys/devices/platform/board/info", "r"))) {
-        if (!(f = fopen("/proc/cpuinfo", "r"))) {
-            LOGE("open /proc/cpuinfo failed.");
+    //if (!(f = fopen("/sys/devices/platform/board/info", "r"))) {
+    //    if (!(f = fopen("/proc/cpuinfo", "r"))) {
+    //        LOGE("open /proc/cpuinfo failed.");
+    //        return -1;
+    //    }
+    //}
+
+    if (!(f = fopen("/sys/class/sunxi_info/sys_info", "r"))) {
+        if (!(f = fopen("/etc/sys_info", "r"))) {
+            LOGE("open /sys/class/sunxi_info/sys_info failed.");
             return -1;
         }
     }
-
+    
     while (!feof(f)) {
         if(!fgets(lineUntrim, sizeof(lineUntrim), f)) {
             break;
