@@ -57,6 +57,7 @@ BoardHardwareInfo gAllBoardHardwareInfo[] = {
     {"Allwinnersun8iFamily", 0, NanoPi_Hero,     "NanoPi-Hero",     "7(0)"},
     {"Allwinnersun8iFamily", 0, NanoPi_Duo2,     "NanoPi-Duo2",     "8(0)"},
     {"Allwinnersun8iFamily", 0, NanoPi_R1,       "NanoPi-R1",       "9(0)"},
+    {"Allwinnersun8iFamily", 0, NanoPi_NEO,      "NanoPi-NEO-Armbian",      "0000"},
 
     // a64
     // {"sun50iw1p1", 0, NanoPi_A64, "NanoPi-A64", "0"},
